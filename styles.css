@@ -54,8 +54,13 @@ img { display: block; max-width: 100%; }
 .sea-art img { position: absolute; width: min(76%, 9rem); height: auto; top: 1.4rem; left: 50%; transform: translateX(-50%); border: .2rem solid #263341; border-radius: .75rem; }
 .wear-art { display: grid; place-items: center; background: #e4eeea; }
 .wear-art img { width: 87%; max-height: 12rem; object-fit: contain; }
-.workout-art { display: grid; place-items: center; background: #eef1e8; }
-.workout-art img { width: 275%; max-width: none; justify-self: end; margin-right: -9%; }
+.workout-art { display: grid; place-items: center; background: #f8f9f5; }
+.workout-illustration { position: relative; width: min(95%, 14rem); aspect-ratio: 3 / 2; overflow: hidden; }
+/* Frame the workout diagram from the right side of the share card. */
+.workout-illustration img {
+  position: absolute; top: 50%; left: 50%; width: 230%; max-width: none; height: auto;
+  transform: translate(-73.5%, -46%);
+}
 .footer { border-top: 1px solid var(--line); padding-block: 1rem; color: var(--muted); font-size: .9rem; }
 @media (max-width: 63rem) {
   .hero { gap: 2rem; }
