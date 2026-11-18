@@ -1,0 +1,73 @@
+:root {
+  color-scheme: light;
+  --paper: #f7f8fa;
+  --ink: #292d33;
+  --blue: #0455bf;
+  --muted: #515963;
+  --line: #d4dbe5;
+  font-family: Geist, "Segoe UI", system-ui, sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+}
+* { box-sizing: border-box; }
+body { margin: 0; }
+a { color: inherit; text-underline-offset: .2em; }
+a:focus-visible { outline: 3px solid var(--blue); outline-offset: 4px; }
+img { display: block; max-width: 100%; }
+.frame { width: min(calc(100% - 3rem), 72rem); margin-inline: auto; }
+.skip {
+  position: fixed; inset: 1rem auto auto 1rem; z-index: 2;
+  padding: .7rem 1rem; background: white; transform: translateY(-160%);
+}
+.skip:focus { transform: none; }
+.masthead, .footer { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+.masthead { min-height: 4.8rem; border-bottom: 1px solid var(--line); }
+.brand { display: flex; align-items: center; gap: .7rem; text-decoration: none; font-weight: 700; }
+.brand img { object-fit: contain; }
+.masthead nav a, .footer a { display: inline-block; padding: .65rem .2rem; }
+.hero { display: grid; grid-template-columns: 1.05fr 1fr; align-items: center; gap: clamp(1.5rem, 5vw, 5rem); padding-block: clamp(2.8rem, 8vw, 6rem); }
+.hero h1 { font-size: clamp(3.3rem, 9vw, 7.4rem); line-height: .96; letter-spacing: -.075em; margin: .18em 0; }
+.hero h1 span { color: var(--blue); }
+.eyebrow { color: var(--blue); font-weight: 700; font-size: .79rem; letter-spacing: .1em; text-transform: uppercase; margin: 0; }
+.intro { font-size: clamp(1.12rem, 2vw, 1.4rem); color: var(--muted); line-height: 1.5; max-width: 23ch; margin: 1.5rem 0; }
+.button { display: inline-flex; align-items: center; gap: 1.2rem; padding: .72rem 1.04rem; min-height: 2.75rem; border-radius: .45rem; background: var(--blue); color: white; font-weight: 700; text-decoration: none; }
+.button:hover { background: #034795; }
+.brand-art {
+  display: grid; place-items: center; aspect-ratio: 1.24;
+  background: radial-gradient(ellipse at 65% 33%, #f8fbff, #e4edf8);
+  border: 1px solid #ccdaee;
+  border-radius: .9rem;
+}
+.brand-art img { width: 47%; height: auto; }
+.apps { padding-bottom: clamp(2.5rem, 6vw, 4.5rem); }
+.apps h2 { font-size: clamp(1.65rem, 3vw, 2.3rem); margin: 0 0 1.15rem; letter-spacing: -.04em; }
+.app-grid { display: grid; gap: 1.25rem; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.card { display: grid; grid-template-columns: 1fr .6fr; border: 1px solid var(--line); border-radius: .8rem; overflow: hidden; background: white; }
+.card-copy { padding: clamp(1rem, 2.3vw, 1.65rem); }
+.app-name { display: flex; align-items: center; gap: .65rem; }
+.app-name img { object-fit: contain; width: 2.5rem; height: 2.5rem; }
+.app-name h3 { font-size: clamp(1.15rem, 2.3vw, 1.55rem); margin: 0; letter-spacing: -.035em; }
+.card p { max-width: 28ch; margin: .75rem 0 .4rem; line-height: 1.55; color: var(--muted); }
+.card a { display: inline-flex; align-items: center; gap: .5rem; min-height: 2.75rem; color: var(--blue); font-weight: 700; }
+.art { position: relative; min-height: 13rem; min-width: 0; overflow: hidden; }
+.sea-art { background: #e2eff9; }
+.sea-art img { position: absolute; width: min(76%, 9rem); height: auto; top: 1.4rem; left: 50%; transform: translateX(-50%); border: .2rem solid #263341; border-radius: .75rem; }
+.wear-art { display: grid; place-items: center; background: #e4eeea; }
+.wear-art img { width: 87%; max-height: 12rem; object-fit: contain; }
+.footer { border-top: 1px solid var(--line); padding-block: 1rem; color: var(--muted); font-size: .9rem; }
+@media (max-width: 54rem) {
+  .hero { gap: 2rem; }
+  .app-grid { grid-template-columns: 1fr; }
+  .art { min-height: 11rem; }
+}
+@media (max-width: 34rem) {
+  .frame { width: calc(100% - 2rem); }
+  .hero { grid-template-columns: 1fr; padding-block: 2.5rem; }
+  .brand-art { aspect-ratio: 2; }
+  .brand-art img { width: min(31%, 7rem); }
+  .card { grid-template-columns: minmax(0, 1fr) minmax(4.5rem, .55fr); }
+  .card-copy { padding: .95rem; }
+  .app-name { gap: .5rem; }
+  .app-name img { width: 1.8rem; height: 1.8rem; }
+  .art { min-height: 10rem; }
+}
