@@ -34,11 +34,11 @@ img { display: block; max-width: 100%; }
 .button:hover { background: #034795; }
 .brand-art {
   display: grid; place-items: center; aspect-ratio: 1.24;
-  background: radial-gradient(ellipse at 65% 33%, #f8fbff, #e4edf8);
+  background: radial-gradient(ellipse, #f8fbff, #e4edf8);
   border: 1px solid #ccdaee;
   border-radius: .9rem;
 }
-.brand-art img { width: 47%; height: auto; }
+.brand-art img { width: 58%; height: auto; }
 .apps { padding-bottom: clamp(2.5rem, 6vw, 4.5rem); }
 .apps h2 { font-size: clamp(1.65rem, 3vw, 2.3rem); margin: 0 0 1.15rem; letter-spacing: -.04em; }
 .app-grid { display: grid; gap: 1.25rem; grid-template-columns: repeat(3, minmax(0, 1fr)); }
@@ -71,7 +71,7 @@ img { display: block; max-width: 100%; }
   .frame { width: calc(100% - 2rem); }
   .hero { grid-template-columns: 1fr; padding-block: 2.5rem; }
   .brand-art { aspect-ratio: 2; }
-  .brand-art img { width: min(31%, 7rem); }
+  .brand-art img { width: min(37%, 7rem); }
   .card { grid-template-columns: minmax(0, 1fr) minmax(4.5rem, .55fr); }
   .card-copy { padding: .95rem; }
   .app-name { gap: .5rem; }
