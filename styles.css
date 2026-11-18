@@ -41,7 +41,7 @@ img { display: block; max-width: 100%; }
 .brand-art img { width: 47%; height: auto; }
 .apps { padding-bottom: clamp(2.5rem, 6vw, 4.5rem); }
 .apps h2 { font-size: clamp(1.65rem, 3vw, 2.3rem); margin: 0 0 1.15rem; letter-spacing: -.04em; }
-.app-grid { display: grid; gap: 1.25rem; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.app-grid { display: grid; gap: 1.25rem; grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .card { display: grid; grid-template-columns: 1fr .6fr; border: 1px solid var(--line); border-radius: .8rem; overflow: hidden; background: white; }
 .card-copy { padding: clamp(1rem, 2.3vw, 1.65rem); }
 .app-name { display: flex; align-items: center; gap: .65rem; }
@@ -54,8 +54,10 @@ img { display: block; max-width: 100%; }
 .sea-art img { position: absolute; width: min(76%, 9rem); height: auto; top: 1.4rem; left: 50%; transform: translateX(-50%); border: .2rem solid #263341; border-radius: .75rem; }
 .wear-art { display: grid; place-items: center; background: #e4eeea; }
 .wear-art img { width: 87%; max-height: 12rem; object-fit: contain; }
+.workout-art { display: grid; place-items: center; background: #eef1e8; }
+.workout-art img { width: 275%; max-width: none; justify-self: end; margin-right: -9%; }
 .footer { border-top: 1px solid var(--line); padding-block: 1rem; color: var(--muted); font-size: .9rem; }
-@media (max-width: 54rem) {
+@media (max-width: 63rem) {
   .hero { gap: 2rem; }
   .app-grid { grid-template-columns: 1fr; }
   .art { min-height: 11rem; }
